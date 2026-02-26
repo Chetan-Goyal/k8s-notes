@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx-deployment-via-file # matches with key value pair of PODS (not deployment)
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

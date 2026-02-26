@@ -1,0 +1,21 @@
+apiVersion: apps/v1 # each kind has a specific api version, use that only.. It is used for validation.
+kind: Deployment
+metadata: # metadata for our given kind
+  name: nginx-deployment
+  labels:
+    app: nginx # we give key value lable to deployment
+spec: # Spec Represents desired state for the deployment, actual state lives in etcd key value store and is continuously compared
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx-deployment-via-file # must match pod label so deployment to pods mapping can be done
+  template:
+    metadata:
+      labels:
+        app: nginx-deployment-via-file # we give key value label to each pod
+    spec: # Spec for pods
+      containers:
+      - name: nginx
+        image: nginx:1.16
+        ports:
+        - containerPort: 8080
