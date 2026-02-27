@@ -91,3 +91,44 @@ Examples of controllers that ship with Kubernetes today are the replication cont
 ### 15. etcd
 etcd is a key value store of a cluster state. It acts like a brain and tracks all the changes. Everyone uses etcd for getting details about nodes, states etc.
 
+## Kubernetes Namespaces
+Namespaces are used for grouping multiple resources in a cluster under a separate logical group to manage Access Control, and Separation of Concern.
+
+We can also limit resources on namespace level. We can't access most resources from another Namespace.
+
+Service can be shared between namespaces (service-name.namespace) but configmap, secrets etc can't be shared.
+
+Default Namespace is "default"
+
+### Automatically Created Namespaces
+1. default: All of our created resources comes under default namespace.
+
+2. kube-node-lease: It hold information related to heartbeats of nodes to determine it's availability.
+
+3. kube-public: it contains publicly accesible data like configmap which contains cluster info.
+
+4. kube-system: It contains system processes like master, kubectl etc.
+
+Namespaces can be created via command or via files itself by adding namespace under metadata.
+
+### Example 1
+
+1. Database Namespace
+2. Monitoring Namespace
+3. Elastic Stack (Shared)
+4. Nginx-Ingress (Shared)
+
+### Example 2
+
+1. Dev
+2. Prod
+3. Stage
+4. Elastic Stack (Shared)
+5. Nginx-Ingress (Shared)
+
+### Example 3
+
+1. Production Blue
+2. Production Green
+3. Elastic Stack (Shared)
+4. Nginx-Ingress (Shared)

@@ -76,3 +76,26 @@ kubectl delete -f simple-workflows/nginx-deployment.yaml
 ```
 kubectl get deployment nginx-deployment -o yaml
 ```
+
+12. Get Namespaces
+
+```
+kubectl get namespace
+```
+
+13. Create Namespace
+
+```
+kubectl create namespace my-namespace
+```
+
+14. Change Local Namespace
+
+```
+kubectl config set-context --current --namespace=test-namespace
+```
+
+Validation:
+```
+kubectl config view --minify | grep namespace:
+```
