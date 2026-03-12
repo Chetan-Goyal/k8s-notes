@@ -1,0 +1,18 @@
+mongodb:
+  auth:
+    enabled: true
+  
+  podSecurityContext:
+    fsGroup: 1001
+  volumePermissions:
+    enabled: true
+
+mongoExpress:
+  enabled: true
+  image:
+    repository: mongo-express
+    tag: latest
+
+  service:
+    type: LoadBalancer
+    port: 8081

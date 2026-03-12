@@ -1,0 +1,12 @@
+apiVersion: v2
+name: mongo-stack
+description: MongoDB + Mongo Express stack
+type: application
+version: 0.1.0
+appVersion: "1.0"
+
+dependencies:
+  - name: mongodb
+    version: 18.6.1
+    repository: https://charts.bitnami.com/bitnami
+
