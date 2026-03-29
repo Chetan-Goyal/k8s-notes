@@ -1,0 +1,22 @@
+Unseal Key 1: Kk+Z1FFAiSfPalQyRGT1WVQyMwx+Okv2F56ePfNkuQIE
+Unseal Key 2: 293j3Elg1abhw1aTaJDkEBDm/h4XUHHsqq6xKfKea+fb
+Unseal Key 3: 0YWpw0rGN7CteogC4AxO6yS3XBND4JsaT7h7Qw34gRD1
+Unseal Key 4: fzTwzhHtUeP7oyMBbd/oGe2jqGofcSwj98yAEV2Uz+7W
+Unseal Key 5: xHmggG4zPXRqmplWgtPKLUr/8pHB0sJ/ynHHrW2UVGHB
+
+Initial Root Token: s.r7FgoDdKihIS54MLmG342blh
+
+
+
+
+// k8s-dev-new
+Unseal Key 1: 4TjfBQKQWJ1tAYfo0Ka6RvsmBNfIWiizyASptwCFd/91
+Unseal Key 2: pTTxk2VW5ZFUZG+gZOLmQnD50oVM5aFfmS3xPIwK3MEL
+Unseal Key 3: JF3fgBeAPf3KDyjWojkPWqfTDLAg9EOwR8zCO+W6imRv
+Unseal Key 4: dOUA33zh88ZPcQJL+Zwj9HYLvuzvlQg+cJjLULYqDbJC
+Unseal Key 5: 7J99kM+NYs4FyfwxkYHSa+NP/xa9wUMmK7XkC2W6zGMl
+
+Initial Root Token: s.LhvNIxMIbD95UTD5ugt7kU1I
+
+
+These are temp keys. Dont worry, they are not used anywhere. :)

@@ -1,0 +1,34 @@
+environments:
+  dev:
+    namespace: dev
+    services:
+      - name: orders-api
+        secrets:
+          - name: mongodb
+            path: dev/orders-api/mongodb
+            keys: [username, password]
+
+  staging:
+    namespace: staging
+    services:
+      - name: orders-api
+        secrets:
+          - name: mongodb
+            path: staging/orders-api/mongodb
+            keys: [username, password]
+
+  prod:
+    namespace: prod
+    services:
+      - name: orders-api
+        secrets:
+          - name: mongodb
+            path: prod/orders-api/mongodb
+            keys: [username, password]
+
+vault:
+  server: http://openbao.openbao.svc:8200
+  mountPath: kubernetes
+  kvPath: kv
+
+targetEnv: temp # ! should be dev, staging, or prod when running the workflow

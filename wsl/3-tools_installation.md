@@ -142,6 +142,7 @@ Expose it as NodePort:
 
 ```bash
 kubectl expose deployment nginx --type=NodePort --port=80
+kubectl port-forward svc/nginx 8080:80
 ```
 
 Get assigned port:

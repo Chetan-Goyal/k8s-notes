@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: secret-test
+  namespace: staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: secret-test
+  template:
+    metadata:
+      labels:
+        app: secret-test
+    spec:
+      containers:
+      - name: test
+        image: busybox
+        command: ["/bin/sh", "-c"]
+        args:
+          - |
+            echo "Checking env vars...";
+            echo "USERNAME=$DB_USERNAME";
+            echo "PASSWORD=$DB_PASSWORD";
+            sleep 3600;
+        env:
+        - name: DB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: orders-api-mongodb   # change if different
+              key: username
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: orders-api-mongodb
+              key: password
